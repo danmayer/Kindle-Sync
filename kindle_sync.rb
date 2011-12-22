@@ -4,6 +4,18 @@ require 'json'
 require 'sqlite3'
 require 'active_support/core_ext/object/blank'
 
+####
+# This is a modified version of Instapaper Kindle Two way Sync from Abhi Yerra
+# http://codeshop.posterous.com/instapaper-kindle-two-way-sync
+# I had some issues with that script that i fixed.
+# I also moved all the configurations out to ENV vars.
+#
+# I am considering intergrating this with the open sourced mac ruby Ephemera 2 mac ruby code.
+# That had a nice UI / backgroud watcher, but the sync portion broke and this works.
+# I am also trying to think of a way that I could do something with a web service to sync to kindle
+# but this really needs filesystem access to the kindle
+####
+
 # Get your key here. http://www.instapaper.com/main/request_oauth_consumer_token
 required_params = %w(INSTAPAPER_CONSUMER_KEY INSTAPAPER_CONSUMER_SECRET INSTAPAPER_USERNAME INSTAPAPER_PASSWORD KINDLEGEN)
 
