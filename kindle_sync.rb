@@ -112,3 +112,5 @@ end
 
 #remove old files
 `cd #{path} && find . -name "*html" -exec rm {} \\;`
+
+puts "sync completed"
